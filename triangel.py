@@ -3,6 +3,9 @@ from .figure import Figure
 
 class Triangle(Figure):
     def __init__(self, a, b, c) -> None:
+        if a <= 0 or b <= 0 or c <= 0:
+            raise ValueError("Стороны треугольника должны быть больше 0")
+        
         super().__init__("Triangle")
         self.a = a
         self.b = b
