@@ -6,6 +6,9 @@ class Triangle(Figure):
         if a <= 0 or b <= 0 or c <= 0:
             raise ValueError("Стороны треугольника должны быть больше 0")
         
+        if a + b <= c or a + c <= b or b + c <= a:
+            raise ValueError("Сумма двух сторон треугольника должна быть больше третьей")
+        
         super().__init__("Triangle")
         self.a = a
         self.b = b
