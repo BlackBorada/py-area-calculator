@@ -8,10 +8,18 @@ class TestCircle(unittest.TestCase):
         self.assertAlmostEqual(Circle(3).area(), 9 * pi)
 
     def test_invalid_radius_type(self):
-        pass
+        with self.assertRaises(TypeError):
+            Circle("test")
+        with self.assertRaises(TypeError):
+            Circle([3])
+        with self.assertRaises(TypeError):
+            Circle({3})
 
     def test_invalid_radious_value(self):
-        pass
+        with self.assertRaises(ValueError):
+            Circle(0)
+        with self.assertRaises(ValueError):
+            Circle(-3)
 
 if __name__ == '__main__':
     unittest.main()
