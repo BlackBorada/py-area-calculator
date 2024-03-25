@@ -17,6 +17,9 @@ class TestTriangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             Triangle(1, 1, 2)
 
+    def test_right_triangle(self):
+        self.assertTrue(Triangle(3,4,5).is_right())
+        self.assertFalse(Triangle(3,4,6).is_right())
 
 if __name__ == '__main__':
     unittest.main()

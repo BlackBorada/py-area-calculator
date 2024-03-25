@@ -18,3 +18,6 @@ class Triangle(Figure):
         s = (self.a + self.b + self.c) / 2
         return sqrt(s * (s- self.a) * (s - self.b) * (s - self.c))
     
+    def is_right(self):
+        sides = sorted([self.a, self.b, self.c])
+        return  (sides[0] ** 2 + sides[1] ** 2) == sides[2] ** 2
