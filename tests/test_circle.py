@@ -1,10 +1,11 @@
 import unittest
 from math import pi
-from ..circle import Circle
+from circle import Circle
+
 
 class TestCircle(unittest.TestCase):
     def test_valid_circle(self):
-        pass
+        self.assertAlmostEqual(Circle(3).area(), 9 * pi)
 
     def test_invalid_radius_type(self):
         pass

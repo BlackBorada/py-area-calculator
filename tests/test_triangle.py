@@ -1,5 +1,5 @@
 import unittest
-from ..triangel import Triangle
+from triangel import Triangle
 
 class TestTriangle(unittest.TestCase):
     def test_valid_triangle(self):

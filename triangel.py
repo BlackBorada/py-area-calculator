@@ -1,5 +1,5 @@
 from math import sqrt
-from .figure import Figure
+from figure import Figure
 
 class Triangle(Figure):
     def __init__(self, a, b, c) -> None:
