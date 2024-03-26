@@ -21,5 +21,9 @@ class TestTriangle(unittest.TestCase):
         self.assertTrue(Triangle(3,4,5).is_right())
         self.assertFalse(Triangle(3,4,6).is_right())
 
+    def test_invalid_side_type(self):
+        with self.assertRaises(TypeError):
+            Triangle("a", '2', [4])
+
 if __name__ == '__main__':
     unittest.main()
