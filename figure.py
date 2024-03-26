@@ -7,3 +7,9 @@ class Figure(ABC):
     @abstractmethod
     def area(self):
         raise NotImplementedError
+    
+    @staticmethod
+    def calculate_area(figure):
+        if not isinstance(figure, Figure):
+            raise TypeError("Неверный тип фигуры")
+        return figure.area()
