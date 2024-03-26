@@ -3,7 +3,7 @@ import unittest
 
 from circle import Circle
 from figure import Figure
-from triangel import Triangle
+from triangle import Triangle
 
 class TestCalculateArea(unittest.TestCase):
     def test_calculate_area(self):
